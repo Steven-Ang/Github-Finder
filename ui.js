@@ -10,7 +10,7 @@ class UI {
         <div class="row">
           <div class="col-md-3">
             <img class="img-fluid mb-2" src="${user.avatar_url}">
-            ${user.bio ? `<p>${user.bio}</p>` : ''}
+            ${user.bio ? `<small style="display: inline-block" class="my-2"><strong>${user.bio}</strong></small>` : ''}
             <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-2">View Profile</a>
           </div>
           <div class="col-md-9">
@@ -20,9 +20,9 @@ class UI {
             <span class="badge badge-info">Followings: ${user.following}</span>
             <br><br>
             <ul class="list-group">
-              <li class="list-group-item">Company: ${user.company}</li>
-              <li class="list-group-item">Website/Blog: ${user.blog}</li>
-              <li class="list-group-item">Location: ${user.location}</li>
+              <li class="list-group-item">Company: ${user.company ? user.company : "none"}</li>
+              <li class="list-group-item">Website/Blog: ${user.blog ? user.blog: "none"}</li>
+              <li class="list-group-item">Location: ${user.location ? user.location : "none"}</li>
               <li class="list-group-item">Member Since: ${user.created_at}</li>
             </ul>
           </div>
