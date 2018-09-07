@@ -77,7 +77,7 @@ class UI {
     // Timeout after 3 seconds
     setTimeout(() => {
       this.clearAlert();
-    }, 3000);
+    }, 1200);
   }
 
   // Clear alert message
